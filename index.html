@@ -14,11 +14,18 @@
     function initMap(){
       // Map options
       var options = {
-        zoom: 16,
+        zoom: 12,
         center: {lat: 49.2827, lng: -123.1207}
       }
       // New map
       var map = new google.maps.Map(document.getElementById('map'), options);
+
+      // Add marker
+      var marker = new google.maps.Marker({
+        position: {lat: 49.3043, lng:-123.1443},
+        map: map
+      })
+
     }
   </script>
 
