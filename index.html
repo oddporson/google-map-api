@@ -3,9 +3,27 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet"  type="text/css" href="index.css">
   <title>My Google Map</title>
 </head>
 <body>
-  
+  <h1>My Google Map</h1>
+  <div id="map"></div>
+
+  <script>
+    function initMap(){
+      // Map options
+      var options = {
+        zoom: 16,
+        center: {lat: 49.2827, lng: -123.1207}
+      }
+      // New map
+      var map = new google.maps.Map(document.getElementById('map'), options);
+    }
+  </script>
+
+
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAsjh7g4wRory_pCdvaKvKeMPAKwhPWX6w&callback=initMap"
+    async defer></script>
 </body>
 </html>
